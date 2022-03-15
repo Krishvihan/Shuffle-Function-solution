@@ -1,0 +1,16 @@
+const swapNum = (numbers, x, y) => {
+const temp = numbers[x];
+numbers[x] = numbers[y];
+numbers[y] = temp;
+};
+
+const reArrange = (numbers) => {
+console.log("Input data", numbers.join(", "));
+
+for (let i = 1; i < numbers.length - 1; i += 2)
+swapNum(numbers, i, i + 1);
+
+return numbers;
+};
+
+console.log("Output data", reArrange([2, 1, 5, 3, 11, 7]).join(", "));
